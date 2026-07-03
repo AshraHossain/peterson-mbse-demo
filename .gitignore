@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Office temp/lock files
+~$*
+*.tmp
+
+# Cameo / MagicDraw backups and locks
+*.mdzip.bak
+*.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
