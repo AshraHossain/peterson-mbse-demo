@@ -1,2 +1,268 @@
-# Route Deconfliction Advisory subsystem requirements
-# Populated in Phase 1.
+# Route Deconfliction Advisory (RDA) Subsystem — Requirements
+# Project: PetersonMBSE-Demo (portfolio / interview-prep scenario)
+# Source: derived stakeholder needs for a mission planning tool subsystem.
+# allocated_block is intentionally blank — filled in by hand after the BDD
+# is built in Cameo (satisfy links are the practiced skill, not generated).
+
+subsystem: Route Deconfliction Advisory (RDA)
+version: "0.1"
+
+requirements:
+
+  - id: REQ-001
+    category: functional
+    shall_statement: >-
+      The RDA subsystem shall detect all spatial conflicts between a submitted
+      candidate route and every active route stored in the mission plan
+      database, where a conflict is defined as predicted separation of less
+      than 5 NM laterally and less than 1,000 ft vertically at any coincident
+      time point.
+    rationale: >-
+      Conflict detection is the core function of the subsystem; the separation
+      thresholds mirror commonly used en-route separation minima so the
+      scenario stays plausible without referencing any classified criteria.
+    verification_method: Test
+    success_criteria: >-
+      Across a regression set of 50 scenario pairs with known (seeded)
+      conflicts, 100% of seeded conflicts are detected; zero missed conflicts.
+    priority: Critical
+    allocated_block: ""
+
+  - id: REQ-002
+    category: functional
+    shall_statement: >-
+      The RDA subsystem shall assign each detected conflict exactly one
+      severity classification of WARNING (predicted separation below 50% of
+      the separation minima in REQ-001) or ADVISORY (all other detected
+      conflicts).
+    rationale: >-
+      Operators need to triage: near-violations demand immediate attention,
+      marginal ones do not. Two bands keep operator workload manageable.
+    verification_method: Test
+    success_criteria: >-
+      For 20 test conflicts with computed separation values straddling the
+      50% boundary, every conflict receives the correct classification;
+      no conflict receives zero or two classifications.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-003
+    category: functional
+    shall_statement: >-
+      For each detected conflict, the RDA subsystem shall generate at least
+      one recommended route modification that restores the separation minima
+      of REQ-001 and does not violate any active airspace constraint ingested
+      per REQ-008.
+    rationale: >-
+      An advisory tool that only flags problems pushes the workload back on
+      the operator; recommendations must themselves be conflict-free and
+      legal, or trust in the tool collapses.
+    verification_method: Analysis
+    success_criteria: >-
+      For 25 seeded conflict scenarios, analysis of generated recommendations
+      shows 100% restore required separation and 0 violate any active
+      airspace constraint.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-004
+    category: timing_performance
+    shall_statement: >-
+      The RDA subsystem shall complete conflict detection and advisory
+      generation for a candidate route containing up to 100 waypoints within
+      2.0 seconds of route submission, measured at the 95th percentile over
+      any 100 consecutive submissions.
+    rationale: >-
+      Deconfliction runs inside an interactive planning loop; beyond ~2
+      seconds planners perceive the tool as blocking and route around it.
+      95th percentile stated so the requirement is statistically testable.
+    verification_method: Test
+    success_criteria: >-
+      In a 500-submission load run using 100-waypoint routes, the 95th
+      percentile submission-to-advisory latency is ≤ 2.0 s.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-005
+    category: timing_performance
+    shall_statement: >-
+      The RDA subsystem shall re-evaluate all active routes and publish
+      updated advisories within 5.0 seconds of receiving a changed airspace
+      constraint set.
+    rationale: >-
+      Airspace changes (e.g., a new restricted area) can invalidate many
+      routes at once; a bounded re-evaluation time keeps the displayed
+      picture trustworthy after a change.
+    verification_method: Test
+    success_criteria: >-
+      With 50 active routes loaded, a constraint-set update triggers
+      republication of all affected advisories in ≤ 5.0 s in 10 of 10 trials.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-006
+    category: capacity
+    shall_statement: >-
+      The RDA subsystem shall maintain the timing performance of REQ-004 and
+      REQ-005 while 50 active routes are simultaneously stored and monitored.
+    rationale: >-
+      Sizing driver. Fifty concurrent routes represents a plausible upper
+      bound for a single planning cell in this scenario; timing requirements
+      are meaningless without a stated load.
+    verification_method: Test
+    success_criteria: >-
+      Load test at exactly 50 active routes shows REQ-004 and REQ-005
+      thresholds still met; no advisory dropped or duplicated.
+    priority: Medium
+    allocated_block: ""
+
+  - id: REQ-007
+    category: interface
+    shall_statement: >-
+      The RDA subsystem shall accept candidate route submissions from the
+      mission planning client exclusively through the route-submission
+      interface defined in ICD-RDA-001, and shall reject any submission that
+      fails schema validation with a machine-readable error response
+      identifying the failed field.
+    rationale: >-
+      A single controlled entry point keeps the interface testable and the
+      IBD honest; explicit rejection behavior prevents silent data loss at
+      the boundary.
+    verification_method: Test
+    success_criteria: >-
+      All of 20 valid submissions are accepted; all of 20 deliberately
+      malformed submissions are rejected with an error response naming the
+      offending field; zero malformed submissions reach the conflict
+      detection function.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-008
+    category: interface
+    shall_statement: >-
+      The RDA subsystem shall ingest airspace constraint data (restricted
+      areas, corridors, and altitude blocks) through the constraint-ingest
+      interface defined in ICD-RDA-002, and shall log and quarantine any
+      constraint record that fails validation without interrupting processing
+      of valid records in the same batch.
+    rationale: >-
+      Constraint data arrives from an external provider and will sometimes be
+      dirty; one bad record must not take down ingestion of the rest or
+      silently vanish.
+    verification_method: Test
+    success_criteria: >-
+      A 100-record batch containing 5 invalid records results in 95 records
+      ingested, 5 quarantined with log entries, and zero ingest-process
+      restarts.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-009
+    category: interface
+    shall_statement: >-
+      The RDA subsystem shall publish each advisory to the mission planning
+      client as a single message containing, at minimum: conflict identifier,
+      identifiers of both routes involved, predicted location and time of
+      closest approach, severity classification per REQ-002, and the
+      recommended modification per REQ-003.
+    rationale: >-
+      Fixes the advisory message content so the client display, the ICD, and
+      the IBD item flows all agree on what crosses the boundary.
+    verification_method: Inspection
+    success_criteria: >-
+      Inspection of the published message schema and 10 captured advisory
+      messages confirms every listed field is present and populated in all
+      10 messages.
+    priority: Medium
+    allocated_block: ""
+
+  - id: REQ-010
+    category: data
+    shall_statement: >-
+      The RDA subsystem shall retain every generated advisory, every operator
+      response to an advisory, and every quarantined constraint record for a
+      minimum of 30 days in a form exportable to CSV.
+    rationale: >-
+      Post-mission analysis and audit both need the decision trail; 30 days
+      covers a typical exercise cycle in this scenario.
+    verification_method: Demonstration
+    success_criteria: >-
+      Demonstration retrieves and exports to CSV an advisory, an operator
+      response, and a quarantined record each aged 30 days in an
+      accelerated-clock test environment.
+    priority: Medium
+    allocated_block: ""
+
+  - id: REQ-011
+    category: data
+    shall_statement: >-
+      The RDA subsystem shall timestamp every advisory with the age of the
+      airspace constraint data used to produce it, and shall mark any
+      advisory computed from constraint data older than 15 minutes as STALE
+      in the published message.
+    rationale: >-
+      An advisory built on outdated airspace data is worse than no advisory
+      if the operator cannot tell the difference; data currency must be
+      visible at the point of use.
+    verification_method: Test
+    success_criteria: >-
+      With the constraint feed halted for 15 minutes, 100% of newly published
+      advisories carry the STALE marker; with a live feed, zero advisories
+      carry it.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-012
+    category: safety_operator_override
+    shall_statement: >-
+      The RDA subsystem shall apply a recommended route modification only
+      after receiving an explicit operator acceptance for that specific
+      advisory, and shall never modify any route autonomously.
+    rationale: >-
+      The subsystem is advisory by design. Route authority stays with the
+      human operator; this is the load-bearing safety requirement of the
+      whole subsystem.
+    verification_method: Demonstration
+    success_criteria: >-
+      Demonstration shows (a) an accepted advisory applies the modification,
+      (b) a rejected advisory leaves the route byte-identical, and (c) no
+      code path exists in the demonstrated workflow that commits a route
+      change without an operator acceptance event.
+    priority: Critical
+    allocated_block: ""
+
+  - id: REQ-013
+    category: safety_operator_override
+    shall_statement: >-
+      The RDA subsystem shall record every operator acceptance, rejection,
+      or override of an advisory with the operator identifier, the advisory
+      identifier, the action taken, and a timestamp accurate to 1 second.
+    rationale: >-
+      Override accountability: when an operator overrules the tool, the
+      audit trail must show who, what, and when — this is what makes the
+      override provision of REQ-012 defensible.
+    verification_method: Test
+    success_criteria: >-
+      Each of 10 test actions (mixed accept/reject/override) produces exactly
+      one audit record containing all four fields, with timestamp within 1 s
+      of the injected action time.
+    priority: High
+    allocated_block: ""
+
+  - id: REQ-014
+    category: availability
+    shall_statement: >-
+      The RDA subsystem shall achieve an operational availability of at least
+      99.5% over any 30-day evaluation period, excluding scheduled
+      maintenance windows announced at least 24 hours in advance.
+    rationale: >-
+      Planners fall back to manual deconfliction when the tool is down, which
+      is slow and error-prone; 99.5% (≈3.6 h downtime/month) is a plausible
+      target for a non-flight-critical ground tool.
+    verification_method: Analysis
+    success_criteria: >-
+      Reliability analysis (predicted MTBF/MTTR from component data plus
+      observed test-environment uptime logs) shows predicted Ao ≥ 0.995 over
+      a 30-day window.
+    priority: Medium
+    allocated_block: ""
