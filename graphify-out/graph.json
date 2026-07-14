@@ -58,9 +58,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_petersonmbse_demo",
       "community": 3,
-      "norm_label": "petersonmbse-demo project"
+      "norm_label": "petersonmbse-demo project",
+      "id": "readme_petersonmbse_demo"
     },
     {
       "label": "Route Deconfliction Advisory (RDA) Subsystem",
@@ -71,9 +71,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_rda_subsystem",
       "community": 5,
-      "norm_label": "route deconfliction advisory (rda) subsystem"
+      "norm_label": "route deconfliction advisory (rda) subsystem",
+      "id": "readme_rda_subsystem"
     },
     {
       "label": "Hand-Built SysML Model",
@@ -84,9 +84,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_sysml_model",
       "community": 5,
-      "norm_label": "hand-built sysml model"
+      "norm_label": "hand-built sysml model",
+      "id": "readme_sysml_model"
     },
     {
       "label": "Cameo Systems Modeler",
@@ -97,9 +97,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_cameo_systems_modeler",
       "community": 5,
-      "norm_label": "cameo systems modeler"
+      "norm_label": "cameo systems modeler",
+      "id": "readme_cameo_systems_modeler"
     },
     {
       "label": "Requirements Traceability Matrix (RTM.xlsx)",
@@ -110,9 +110,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_rtm",
       "community": 3,
-      "norm_label": "requirements traceability matrix (rtm.xlsx)"
+      "norm_label": "requirements traceability matrix (rtm.xlsx)",
+      "id": "readme_rtm"
     },
     {
       "label": "Deliberate-Defect Exercise",
@@ -123,9 +123,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_deliberate_defect_exercise",
       "community": 7,
-      "norm_label": "deliberate-defect exercise"
+      "norm_label": "deliberate-defect exercise",
+      "id": "readme_deliberate_defect_exercise"
     },
     {
       "label": "Five-Step Modeling Workflow",
@@ -136,9 +136,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_workflow",
       "community": 7,
-      "norm_label": "five-step modeling workflow"
+      "norm_label": "five-step modeling workflow",
+      "id": "readme_workflow"
     },
     {
       "label": "Hand-Built vs Generated Rationale",
@@ -149,9 +149,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_hand_built_rationale",
       "community": 5,
-      "norm_label": "hand-built vs generated rationale"
+      "norm_label": "hand-built vs generated rationale",
+      "id": "readme_hand_built_rationale"
     },
     {
       "label": "Scope Honesty Rationale",
@@ -162,9 +162,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_scope_honesty_rationale",
       "community": 0,
-      "norm_label": "scope honesty rationale"
+      "norm_label": "scope honesty rationale",
+      "id": "readme_scope_honesty_rationale"
     },
     {
       "label": "RDA Requirements Baseline (14 Shall Statements)",
@@ -175,9 +175,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_requirements_baseline",
       "community": 1,
-      "norm_label": "rda requirements baseline (14 shall statements)"
+      "norm_label": "rda requirements baseline (14 shall statements)",
+      "id": "requirements_requirements_baseline"
     },
     {
       "label": "REQ-001 Spatial Conflict Detection",
@@ -188,9 +188,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_001",
       "community": 1,
-      "norm_label": "req-001 spatial conflict detection"
+      "norm_label": "req-001 spatial conflict detection",
+      "id": "requirements_req_001"
     },
     {
       "label": "REQ-002 Severity Classification",
@@ -201,9 +201,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_002",
       "community": 1,
-      "norm_label": "req-002 severity classification"
+      "norm_label": "req-002 severity classification",
+      "id": "requirements_req_002"
     },
     {
       "label": "REQ-003 Recommended Route Modification",
@@ -214,9 +214,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_003",
       "community": 1,
-      "norm_label": "req-003 recommended route modification"
+      "norm_label": "req-003 recommended route modification",
+      "id": "requirements_req_003"
     },
     {
       "label": "REQ-004 Advisory Latency 2.0 s p95",
@@ -227,9 +227,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_004",
       "community": 0,
-      "norm_label": "req-004 advisory latency 2.0 s p95"
+      "norm_label": "req-004 advisory latency 2.0 s p95",
+      "id": "requirements_req_004"
     },
     {
       "label": "REQ-005 Re-evaluation Within 5.0 s",
@@ -240,9 +240,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_005",
       "community": 1,
-      "norm_label": "req-005 re-evaluation within 5.0 s"
+      "norm_label": "req-005 re-evaluation within 5.0 s",
+      "id": "requirements_req_005"
     },
     {
       "label": "REQ-006 Capacity of 50 Active Routes",
@@ -253,9 +253,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_006",
       "community": 1,
-      "norm_label": "req-006 capacity of 50 active routes"
+      "norm_label": "req-006 capacity of 50 active routes",
+      "id": "requirements_req_006"
     },
     {
       "label": "REQ-007 Route-Submission Interface",
@@ -266,9 +266,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_007",
       "community": 4,
-      "norm_label": "req-007 route-submission interface"
+      "norm_label": "req-007 route-submission interface",
+      "id": "requirements_req_007"
     },
     {
       "label": "REQ-008 Constraint Ingest and Quarantine",
@@ -279,9 +279,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_008",
       "community": 1,
-      "norm_label": "req-008 constraint ingest and quarantine"
+      "norm_label": "req-008 constraint ingest and quarantine",
+      "id": "requirements_req_008"
     },
     {
       "label": "REQ-009 Advisory Message Content",
@@ -292,9 +292,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_009",
       "community": 1,
-      "norm_label": "req-009 advisory message content"
+      "norm_label": "req-009 advisory message content",
+      "id": "requirements_req_009"
     },
     {
       "label": "REQ-010 30-Day Audit Data Retention",
@@ -305,9 +305,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_010",
       "community": 0,
-      "norm_label": "req-010 30-day audit data retention"
+      "norm_label": "req-010 30-day audit data retention",
+      "id": "requirements_req_010"
     },
     {
       "label": "REQ-011 Constraint Data Age and STALE Marking",
@@ -318,9 +318,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_011",
       "community": 1,
-      "norm_label": "req-011 constraint data age and stale marking"
+      "norm_label": "req-011 constraint data age and stale marking",
+      "id": "requirements_req_011"
     },
     {
       "label": "REQ-012 Operator Acceptance Required",
@@ -331,9 +331,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_012",
       "community": 6,
-      "norm_label": "req-012 operator acceptance required"
+      "norm_label": "req-012 operator acceptance required",
+      "id": "requirements_req_012"
     },
     {
       "label": "REQ-013 Operator Action Audit Record",
@@ -344,9 +344,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_013",
       "community": 6,
-      "norm_label": "req-013 operator action audit record"
+      "norm_label": "req-013 operator action audit record",
+      "id": "requirements_req_013"
     },
     {
       "label": "REQ-014 99.5% Operational Availability",
@@ -357,9 +357,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_req_014",
       "community": 0,
-      "norm_label": "req-014 99.5% operational availability"
+      "norm_label": "req-014 99.5% operational availability",
+      "id": "requirements_req_014"
     },
     {
       "label": "ICD-RDA-001 Route-Submission Interface Definition",
@@ -370,9 +370,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_icd_rda_001",
       "community": 4,
-      "norm_label": "icd-rda-001 route-submission interface definition"
+      "norm_label": "icd-rda-001 route-submission interface definition",
+      "id": "requirements_icd_rda_001"
     },
     {
       "label": "ICD-RDA-002 Constraint-Ingest Interface Definition",
@@ -383,9 +383,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "requirements_icd_rda_002",
       "community": 4,
-      "norm_label": "icd-rda-002 constraint-ingest interface definition"
+      "norm_label": "icd-rda-002 constraint-ingest interface definition",
+      "id": "requirements_icd_rda_002"
     },
     {
       "label": "Traceability Gap Report",
@@ -396,9 +396,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_gap_report",
       "community": 2,
-      "norm_label": "traceability gap report"
+      "norm_label": "traceability gap report",
+      "id": "traceability_gap_report_gap_report"
     },
     {
       "label": "DEF-01 Defect Entry",
@@ -409,9 +409,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_def_01",
       "community": 2,
-      "norm_label": "def-01 defect entry"
+      "norm_label": "def-01 defect entry",
+      "id": "traceability_gap_report_def_01"
     },
     {
       "label": "DEF-02 Defect Entry",
@@ -422,9 +422,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_def_02",
       "community": 2,
-      "norm_label": "def-02 defect entry"
+      "norm_label": "def-02 defect entry",
+      "id": "traceability_gap_report_def_02"
     },
     {
       "label": "DEF-03 Defect Entry",
@@ -435,9 +435,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_def_03",
       "community": 2,
-      "norm_label": "def-03 defect entry"
+      "norm_label": "def-03 defect entry",
+      "id": "traceability_gap_report_def_03"
     },
     {
       "label": "Traceability Defect Taxonomy",
@@ -448,9 +448,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_defect_taxonomy",
       "community": 2,
-      "norm_label": "traceability defect taxonomy"
+      "norm_label": "traceability defect taxonomy",
+      "id": "traceability_gap_report_defect_taxonomy"
     },
     {
       "label": "Gap Evidence Before/After Screenshots",
@@ -461,9 +461,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_gap_evidence",
       "community": 2,
-      "norm_label": "gap evidence before/after screenshots"
+      "norm_label": "gap evidence before/after screenshots",
+      "id": "traceability_gap_report_gap_evidence"
     },
     {
       "label": "Debugging Narrative as Interview Artifact",
@@ -474,9 +474,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "traceability_gap_report_debugging_narrative_rationale",
       "community": 2,
-      "norm_label": "debugging narrative as interview artifact"
+      "norm_label": "debugging narrative as interview artifact",
+      "id": "traceability_gap_report_debugging_narrative_rationale"
     },
     {
       "label": "Model Consistency Checklist",
@@ -487,9 +487,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_checklist",
       "community": 3,
-      "norm_label": "model consistency checklist"
+      "norm_label": "model consistency checklist",
+      "id": "model_consistency_checklist_checklist"
     },
     {
       "label": "Requirements Coverage Checks",
@@ -500,9 +500,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_requirements_coverage",
       "community": 3,
-      "norm_label": "requirements coverage checks"
+      "norm_label": "requirements coverage checks",
+      "id": "model_consistency_checklist_requirements_coverage"
     },
     {
       "label": "Link Validity Checks",
@@ -513,9 +513,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_link_validity",
       "community": 3,
-      "norm_label": "link validity checks"
+      "norm_label": "link validity checks",
+      "id": "model_consistency_checklist_link_validity"
     },
     {
       "label": "Derivation and Refinement Checks",
@@ -526,9 +526,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_derivation_refinement",
       "community": 1,
-      "norm_label": "derivation and refinement checks"
+      "norm_label": "derivation and refinement checks",
+      "id": "model_consistency_checklist_derivation_refinement"
     },
     {
       "label": "BDD/IBD Agreement Checks",
@@ -539,9 +539,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_bdd_ibd_agreement",
       "community": 4,
-      "norm_label": "bdd/ibd agreement checks"
+      "norm_label": "bdd/ibd agreement checks",
+      "id": "model_consistency_checklist_bdd_ibd_agreement"
     },
     {
       "label": "Behavioral Consistency Checks",
@@ -552,9 +552,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_behavioral_consistency",
       "community": 6,
-      "norm_label": "behavioral consistency checks"
+      "norm_label": "behavioral consistency checks",
+      "id": "model_consistency_checklist_behavioral_consistency"
     },
     {
       "label": "Parametric Consistency Checks",
@@ -565,9 +565,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_parametric_consistency",
       "community": 0,
-      "norm_label": "parametric consistency checks"
+      "norm_label": "parametric consistency checks",
+      "id": "model_consistency_checklist_parametric_consistency"
     },
     {
       "label": "Model Hygiene Checks",
@@ -578,9 +578,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_hygiene",
       "community": 3,
-      "norm_label": "model hygiene checks"
+      "norm_label": "model hygiene checks",
+      "id": "model_consistency_checklist_hygiene"
     },
     {
       "label": "Sections 1-2 Defect Targeting Rationale",
@@ -591,9 +591,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "model_consistency_checklist_defect_targeting_rationale",
       "community": 7,
-      "norm_label": "sections 1-2 defect targeting rationale"
+      "norm_label": "sections 1-2 defect targeting rationale",
+      "id": "model_consistency_checklist_defect_targeting_rationale"
     },
     {
       "label": "Life Cycle Sustainment Plan (LCSP) Outline",
@@ -604,9 +604,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_lcsp",
       "community": 0,
-      "norm_label": "life cycle sustainment plan (lcsp) outline"
+      "norm_label": "life cycle sustainment plan (lcsp) outline",
+      "id": "lcsp_outline_lcsp"
     },
     {
       "label": "Portfolio-Scope Disclaimer",
@@ -617,9 +617,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_scope_disclaimer",
       "community": 0,
-      "norm_label": "portfolio-scope disclaimer"
+      "norm_label": "portfolio-scope disclaimer",
+      "id": "lcsp_outline_scope_disclaimer"
     },
     {
       "label": "Sustainment Strategy (Block Update Cycle)",
@@ -630,9 +630,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_sustainment_strategy",
       "community": 6,
-      "norm_label": "sustainment strategy (block update cycle)"
+      "norm_label": "sustainment strategy (block update cycle)",
+      "id": "lcsp_outline_sustainment_strategy"
     },
     {
       "label": "Supportability Requirements Flow-Down",
@@ -643,9 +643,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_supportability_requirements",
       "community": 0,
-      "norm_label": "supportability requirements flow-down"
+      "norm_label": "supportability requirements flow-down",
+      "id": "lcsp_outline_supportability_requirements"
     },
     {
       "label": "Two-Level Software Maintenance Concept",
@@ -656,9 +656,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_maintenance_concept",
       "community": 0,
-      "norm_label": "two-level software maintenance concept"
+      "norm_label": "two-level software maintenance concept",
+      "id": "lcsp_outline_maintenance_concept"
     },
     {
       "label": "No-Intermediate-Level Simplification Rationale",
@@ -669,9 +669,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_maintenance_simplification_rationale",
       "community": 0,
-      "norm_label": "no-intermediate-level simplification rationale"
+      "norm_label": "no-intermediate-level simplification rationale",
+      "id": "lcsp_outline_maintenance_simplification_rationale"
     },
     {
       "label": "Obsolescence / DMSMS Planning",
@@ -682,9 +682,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_dmsms_planning",
       "community": 4,
-      "norm_label": "obsolescence / dmsms planning"
+      "norm_label": "obsolescence / dmsms planning",
+      "id": "lcsp_outline_dmsms_planning"
     },
     {
       "label": "Sustainment Metrics (Ao, MTTR, Latency Conformance)",
@@ -695,9 +695,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "lcsp_outline_sustainment_metrics",
       "community": 0,
-      "norm_label": "sustainment metrics (ao, mttr, latency conformance)"
+      "norm_label": "sustainment metrics (ao, mttr, latency conformance)",
+      "id": "lcsp_outline_sustainment_metrics"
     }
   ],
   "links": [
